@@ -5,9 +5,323 @@
 :root {
     --background: #F1F1F1;
     --maintext: #08080C;
-    
+    --highlight: #FF9900;
+    --utilitybg: #2B2B3B;
+    --menuselected: #424252;
+    --textfont: 'Titillium Web', sans-serif;
+    --mainfont: 'Tomorrow', sans-serif;
 }
 
 body {
     background-color: var(--background);
+    margin: 0;
+    overflow-x: hidden;
+}
+
+a {
+    cursor: pointer;
+}
+
+.navbar {
+    height: 60px;
+    width: 100vw;
+    background-color: var(--utilitybg);
+    display: flex;
+    align-items: center;
+}
+
+.mobile-burger-menu {
+    margin-left: 24px;
+    margin-right: -48px;
+}
+
+.logo {
+    max-height: 48px;
+    margin: 0 auto;
+}
+
+.logo img {
+    height: 48px;
+}
+
+.desktop-menu-row {
+    display: none;
+    margin-bottom: -35px;
+    margin-right: 128px;
+    gap: 48px;
+}
+
+.desktop-menu-row button {
+    font-size: 24px;
+    text-transform: capitalize;
+    font-family: var(--mainfont);
+    border: none;
+    background-color: var(--utilitybg);
+    color: var(--background);
+    padding: 8px 16px;
+    transition: .2s;
+}
+
+.desktop-menu-row button:hover {
+    transition: .2s;
+    background-color: var(--menuselected);
+    cursor: pointer;
+}
+
+#desktop-selected {
+    background-color: var(--menuselected);
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    width: 100vw;
+    background-color: var(--utilitybg);
+    color: var(--background);
+    font-family: var(--mainfont);
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-line {
+    background-color: var(--highlight);
+    width: 100px;
+    height: 2px;
+    margin: 0 auto;
+}
+
+.footer-side-one {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-footer {
+    height: 68px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.logo-footer img {
+    height: 68px;
+}
+
+.footer-nav {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    margin-bottom: 32px;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: var(--background);
+    transition: .3s;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.footer-nav a:hover {
+    color: var(--highlight);
+    transition: .3s;
+}
+
+.left-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.socials {
+    display: flex;
+    gap: 16px;
+    margin: 32px auto;
+}
+
+.desktop-socials {
+    display: none;
+}
+
+.footertext-news {
+    width: 270px;
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 8px;
+}
+
+.signup {
+    display: flex;
+    flex-direction: row;
+}
+
+input[type=email] {
+    width: 200px;
+    padding: 8px 8px;
+    margin-right: 8px;
+    border: 1px solid var(--background);
+    transition: .5s;
+    outline: none;
+    background-color: var(--utilitybg);
+    color: var(--background);
+}
+
+input[type=email]::placeholder {
+    color: var(--background);
+    font-family: var(--mainfont);
+    font-size: 12px;
+    font-weight: 300;
+    opacity: .7;
+}
+
+input[type=email]:focus {
+    border: 1px solid var(--highlight);
+}
+
+.signup-btn {
+    background-color: var(--highlight);
+    border: 1px solid var(--maintext);
+    padding: 8px 16px;
+    font-family: var(--mainfont);
+    text-transform: capitalize;
+    font-weight: 400;
+    transition: .3s;
+}
+
+.signup-btn:hover {
+    cursor: pointer;
+    transition: .3s;
+    background-color: var(--background);
+}
+
+.info-box {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+
+.open-hours {
+    font-family: var(--mainfont);
+}
+
+.footer-text-opening-header {
+    text-transform: capitalize;
+    margin-bottom: 8px;
+}
+
+.footer-text-opening {
+    font-size: 12px;
+    font-weight: 300;
+    margin: 0;
+}
+
+.footer-text-hours {
+    font-size: 12px;
+    font-weight: 300;
+    margin: 0;
+    opacity: .8;
+}
+
+.location-map img {
+    border: 1px solid var(--maintext);
+    height: 150px;
+}
+
+/*Tablet screens*/
+@media (min-width: 768px) {
+    .top-line {
+        width: 200px;
+    }
+    .footer {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+
+    .footer-side-two {
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+    .desktop-socials {
+        display: flex;
+    }
+
+    .mobile-socials {
+        display: none;
+    }
+}
+
+/*Desktop screens*/
+@media (min-width: 1280px) {
+    .navbar {
+        height: 80px;
+    }
+
+    .mobile-burger-menu {
+        display: none;
+    }
+
+    .logo {
+        margin-right: auto;
+        margin-left: 128px;
+        max-height: fit-content;
+    }
+
+    .logo img {
+        height: 68px;
+    }
+
+    .desktop-menu-row {
+        display: flex;
+    }
+
+    .top-line {
+        width: 300px;
+    }
+
+    .logo-footer {
+        height: 100px;
+    }
+
+    .logo-footer img {
+        height: 100px;
+    }
+
+    .footertext-news {
+        font-size: 16px;
+        width: 300px;
+    }
+
+    input[type=email] {
+        width: 75%;
+    }
+
+    .open-hours {
+        width: 168px;
+    }
+
+    .footer-text-opening-header {
+        font-size: 20px;
+    }
+
+    .footer-text-opening {
+        font-size: 16px;
+    }
+
+    .footer-text-hours {
+        font-size: 16px;
+    }
+
+    .location-map img {
+        height: 200px;
+    }
 }
