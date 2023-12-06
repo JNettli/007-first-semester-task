@@ -37,6 +37,10 @@ a {
     max-width: 100vw;
 }
 
+#herodesktop {
+    display: none;
+}
+
 .herobanner-textoverlay {
     position: absolute;
     background-color: var(--maintext);
@@ -95,6 +99,9 @@ h2 {
 .category-box {
     background-color: var(--background);
     padding: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .category-box img {
@@ -139,6 +146,22 @@ h2 {
     text-align: center;
 }
 
+.event-line {
+    display: none;
+    background-color: var(--highlight);
+    height: 2px;
+    width: 260px;
+    margin: 24px 0;
+}
+
+.event-undertext {
+    display: none;
+    font-family: var(--textfont);
+    font-size: 16px;
+    width: 260px;
+
+}
+
 .orange-btn {
     padding: 16px 0;
     width: 300px;
@@ -179,25 +202,35 @@ h2 {
     text-transform: capitalize;
 }
 
+.blue-btn:hover {
+    background-color: var(--background);
+    transition: .3s;
+}
+
+.blue-btn:active {
+    background-color: var(--highlight);
+    transition: .3s;
+}
+
 .fade-to-black {
     background-image: linear-gradient(rgba(241, 241, 241, 0), rgba(0, 0, 0, 1) 70%);
     width: 100vw;
     height: 150px;
 }
 
-.starsgif {
+.giftshop-bg {
     position: relative;
     width: 100vw;
-    height: 498px;
+    height: 666px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-x: hidden;
+    overflow: hidden;
+    background-color: #040204;
 }
 
 .starsgif img {
     position: absolute;
-    z-index: -1;
 }
 
 .giftshop-header {
@@ -213,14 +246,7 @@ h2 {
     background-color: #D9D9D933;
     display: flex;
     flex-direction: row;
-    position: relative;
     padding: 12px 8px;
-}
-
-.giftshop-box-left {
-    height: 180px;
-    width: 180px;
-    z-index: 1;
 }
 
 .giftshop-box-left img {
@@ -247,4 +273,100 @@ h2 {
     padding: 10px 0;
     margin-top: 20px;
     margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .herobanner-textoverlay {
+        padding: 14px 74px;
+    }
+
+    .herobanner-textoverlay p {
+        font-size: 40px;
+    }
+
+    .main-bg {
+        width: auto;
+    }
+
+    .category-centerer {
+        gap: 15%;
+    }
+
+    .category-box img {
+        height: 200px;
+        width: 200px;
+    }
+
+    .category-header {
+        font-size: 18px;
+    }
+
+    .category-maintext {
+        font-size: 16px;
+    }
+
+    .event-category {
+        flex-direction: row;
+        justify-content: center;
+        gap: 48px;
+        padding: 0 24px;
+    }
+
+    .event-maintext {
+        margin-top: 24px;
+        width: 260px;
+    }
+
+    .event-category .orange-btn {
+        width: 260px;
+    }
+
+    .event-undertext {
+        display: block;
+    }
+
+    .event-line {
+        display: block;
+    }
+}
+
+@media (min-width: 1280px) {
+    .herobanner-textoverlay {
+        padding: 16px 120px;
+    }
+    .herobanner-textoverlay p {
+        font-size: 54px;
+    }
+    
+    #heromobile {
+        display: none;
+    }
+    #herodesktop {
+        display: block;
+    }
+
+    .category-box img {
+        height: 280px;
+        width: 280px;
+        margin: 8px;
+    }
+
+    .giftshop-box {
+        padding: 16px 32px;
+    }
+
+    .giftshop-box-left img {
+        height: 240px;
+        width: 240px;
+    }
+
+    .giftshop-box-right {
+        width: 220px;
+        margin-left: 16px;
+    }
+
+    .giftshop-maintext {
+        font-size: 28px;
+        width: 250px;
+    }
 }
