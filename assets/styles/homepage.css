@@ -1,0 +1,250 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #F1F1F1;
+    --maintext: #08080C;
+    --highlight: #FF9900;
+    --activeclr: #1FC9FF;
+    --main-bg: #D9D9D9;
+    --utilitybg: #2B2B3B;
+    --menuselected: #424252;
+    --textfont: 'Titillium Web', sans-serif;
+    --mainfont: 'Tomorrow', sans-serif;
+}
+
+body {
+    background-color: var(--main-bg);
+    margin: 0;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.herobanner {
+    position: relative;
+    margin-bottom: -4px;
+}
+
+.herobanner img {
+    max-width: 100vw;
+}
+
+.herobanner-textoverlay {
+    position: absolute;
+    background-color: var(--maintext);
+    opacity: .8;
+    padding: 16px 64px;
+    top: 0;
+    right: 0;
+}
+
+.herobanner-textoverlay p {
+    color: var(--background);
+    font-family: var(--mainfont);
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 10px;
+    text-align: center;
+}
+
+h2 {
+    color: var(--maintext);
+    background-color: var(--background);
+    font-family: var(--mainfont);
+    font-size: 24px;
+    height: 64px;
+    width: 100vw;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 500;
+    margin: 0;
+    padding-top: 15px;
+}
+
+.main-bg {
+    background-color: var(--main-bg);
+    width: 100vw;
+    padding: 16px 35px 32px 35px;
+}
+
+.category-centerer {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.category-centerer a {
+    color: var(--maintext);
+    transition: .3s;
+}
+
+.category-centerer a:hover {
+    color: var(--highlight);
+    transition: .3s;
+}
+
+.category-box {
+    background-color: var(--background);
+    padding: 8px;
+}
+
+.category-box img {
+    height: 160px;
+    width: 160px;
+}
+
+.category-header {
+    font-family: var(--mainfont);
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    text-transform: capitalize;
+    max-width: 160px;
+}
+
+.category-maintext {
+    font-family: var(--mainfont);
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    max-width: 160px;
+}
+
+.event-category {
+    background-color: var(--background);
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.event-category img {
+    max-height: 260px;
+}
+
+.event-maintext {
+    font-family: var(--mainfont);
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.orange-btn {
+    padding: 16px 0;
+    width: 300px;
+    font-family: var(--mainfont);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--maintext);
+    background-color: var(--highlight);
+    transition: .3s;
+    border: var(--maintext) 2px solid;
+    margin-bottom: 20px;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.orange-btn:hover {
+    background-color: var(--background);
+    transition: .3s;
+}
+
+.orange-btn:active {
+    background-color: var(--activeclr);
+    transition: .3s;
+}
+
+.blue-btn {
+    padding: 16px 0;
+    width: 300px;
+    font-family: var(--mainfont);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--maintext);
+    background-color: var(--activeclr);
+    transition: .3s;
+    border: var(--maintext) 2px solid;
+    margin-top: -12px;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.fade-to-black {
+    background-image: linear-gradient(rgba(241, 241, 241, 0), rgba(0, 0, 0, 1) 70%);
+    width: 100vw;
+    height: 150px;
+}
+
+.starsgif {
+    position: relative;
+    width: 100vw;
+    height: 498px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.starsgif img {
+    position: absolute;
+    z-index: -1;
+}
+
+.giftshop-header {
+    font-family: var(--mainfont);
+    font-size: 32px;
+    color: var(--background);
+    text-align: center;
+    width: 318px;
+    margin-bottom: 32px;
+}
+
+.giftshop-box {
+    background-color: #D9D9D933;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    padding: 12px 8px;
+}
+
+.giftshop-box-left {
+    height: 180px;
+    width: 180px;
+    z-index: 1;
+}
+
+.giftshop-box-left img {
+    height: 180px;
+    width: 180px;
+}
+
+.giftshop-box-right {
+    font-family: var(--mainfont);
+    color: var(--background);
+    font-size: 20px;
+    width: 180px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.giftshop-box-right .orange-btn {
+    width: 160px;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px 0;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
