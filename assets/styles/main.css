@@ -6,6 +6,7 @@
     --background: #F1F1F1;
     --maintext: #08080C;
     --highlight: #FF9900;
+    --main-bg: #D9D9D9;
     --utilitybg: #2B2B3B;
     --menuselected: #424252;
     --textfont: 'Titillium Web', sans-serif;
@@ -73,7 +74,7 @@ a {
 }
 
 footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
     margin: 0;
     width: 100vw;
@@ -83,6 +84,7 @@ footer {
 }
 
 .footer {
+    bottom: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
