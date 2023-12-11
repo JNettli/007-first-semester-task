@@ -60,72 +60,6 @@ a {
     text-align: center;
 }
 
-h2 {
-    color: var(--maintext);
-    background-color: var(--background);
-    font-family: var(--mainfont);
-    font-size: 24px;
-    height: 64px;
-    width: 100vw;
-    text-align: center;
-    text-transform: capitalize;
-    font-weight: 500;
-    margin: 0;
-    padding-top: 15px;
-}
-
-.main-bg {
-    background-color: var(--main-bg);
-    width: 100vw;
-    padding: 16px 35px 32px 35px;
-}
-
-.category-centerer {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-}
-
-.category-centerer a {
-    color: var(--maintext);
-    transition: .3s;
-}
-
-.category-centerer a:hover {
-    color: var(--highlight);
-    transition: .3s;
-}
-
-.category-box {
-    background-color: var(--background);
-    padding: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.category-box img {
-    height: 160px;
-    width: 160px;
-}
-
-.category-header {
-    font-family: var(--mainfont);
-    font-size: 15px;
-    font-weight: 500;
-    text-align: center;
-    text-transform: capitalize;
-    max-width: 160px;
-}
-
-.category-maintext {
-    font-family: var(--mainfont);
-    font-size: 15px;
-    font-weight: 400;
-    text-align: center;
-    max-width: 160px;
-}
-
 .event-category {
     background-color: var(--background);
     padding: 8px;
@@ -160,56 +94,6 @@ h2 {
     font-size: 16px;
     width: 260px;
 
-}
-
-.orange-btn {
-    padding: 16px 0;
-    width: 300px;
-    font-family: var(--mainfont);
-    font-size: 20px;
-    font-weight: 500;
-    color: var(--maintext);
-    background-color: var(--highlight);
-    transition: .3s;
-    border: var(--maintext) 2px solid;
-    margin-bottom: 20px;
-    margin-top: 8px;
-    cursor: pointer;
-}
-
-.orange-btn:hover {
-    background-color: var(--background);
-    transition: .3s;
-}
-
-.orange-btn:active {
-    background-color: var(--activeclr);
-    transition: .3s;
-}
-
-.blue-btn {
-    padding: 16px 0;
-    width: 300px;
-    font-family: var(--mainfont);
-    font-size: 20px;
-    font-weight: 500;
-    color: var(--maintext);
-    background-color: var(--activeclr);
-    transition: .3s;
-    border: var(--maintext) 2px solid;
-    margin-top: -12px;
-    cursor: pointer;
-    text-transform: capitalize;
-}
-
-.blue-btn:hover {
-    background-color: var(--background);
-    transition: .3s;
-}
-
-.blue-btn:active {
-    background-color: var(--highlight);
-    transition: .3s;
 }
 
 .fade-to-black {
@@ -284,27 +168,6 @@ h2 {
         font-size: 40px;
     }
 
-    .main-bg {
-        width: auto;
-    }
-
-    .category-centerer {
-        gap: 15%;
-    }
-
-    .category-box img {
-        height: 200px;
-        width: 200px;
-    }
-
-    .category-header {
-        font-size: 18px;
-    }
-
-    .category-maintext {
-        font-size: 16px;
-    }
-
     .event-category {
         flex-direction: row;
         justify-content: center;
@@ -331,6 +194,11 @@ h2 {
 }
 
 @media (min-width: 1280px) {
+    .herobanner img {
+        max-height: 600px;
+        margin-bottom: 4px;
+    }
+
     .herobanner-textoverlay {
         padding: 16px 120px;
     }
@@ -343,12 +211,6 @@ h2 {
     }
     #herodesktop {
         display: block;
-    }
-
-    .category-box img {
-        height: 280px;
-        width: 280px;
-        margin: 8px;
     }
 
     .giftshop-box {
