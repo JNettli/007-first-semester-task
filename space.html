@@ -1,17 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" />
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The Museum of Science">
     <meta name="author" content="JNettli">
-    <link rel="stylesheet" href="assets/styles/main.css" type="text/css" />
+    <link rel="stylesheet" href="assets/styles/main.css" type="text/css">
+    <link rel="stylesheet" href="assets/styles/space.css" type="text/css">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&family=Tomorrow:wght@300;400;500&display=swap" rel="stylesheet">
-    <title>Home Page | Museum of Science</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600&family=Tomorrow:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <title>Space | Museum of Science</title>
 </head>
+
 <body>
     <header class="navbar">
         <div class="mobile-burger-menu">
@@ -24,23 +29,76 @@
         </div>
         <div class="desktop-menu-row">
             <a href="events.html">
-                <button>events</button>
+                <div>events</div>
             </a>
             <a href="space.html">
-                <button>space</button>
+                <div>space</div>
             </a>
             <a href="physics.html">
-                <button>physics</button>
+                <div>physics</div>
             </a>
             <a href="giftshop.html">
-                <button>gift shop</button>
+                <div>gift shop</div>
             </a>
         </div>
     </header>
-    <div>
-        Hello world
+    <div class="herobanner">
+        <img id="heromobile" src="assets/img/herobanner.jpg" alt="Hero-banner rocketman">
+        <img id="herodesktop" src="assets/img/herobannerdesktop.jpg" alt="Hero-banner rocketman">
+        <div class="herobanner-textoverlay">
+            <div class="starman">space</div>
+            <div class="startrek">the final frontier</div>
+            <div class="heroline"></div>
+            <div class="herotext">Visit us today to see our exciting new Space exhibit</div>
+        </div>
     </div>
-
+    <div class="space-bg">
+        <div class="event-category">
+            <div>
+                <img src="assets/img/selfiesat.png" alt="SelfieSat">
+            </div>
+            <div class="center-gang">
+                <div class="event-maintext">Orbit NTNU's Selfiesat Program</div>
+                <div class="event-line"></div>
+                <div class="event-undertext">
+                    How it was made and how this small group form Norway worked with SpaceX to make their dreams a
+                    reality.
+                </div>
+                <div class="event-line"></div>
+                <div class="time-and-place">
+                    <div class="lil-guy">
+                        <img src="assets/img/calendar.svg" alt="Calendar icon">
+                        <div class="infotext">December 1 - 3, 2023 | All Day</div>
+                    </div>
+                    <div class="lil-guy">
+                        <img src="assets/img/location.svg" alt="Location icon">
+                        <div class="infotext">Space Section</div>
+                    </div>
+                </div>
+                <div class="event-maintext">Want to do some pre-show research?</div>
+                <a href="https://orbitntnu.com/selfiesat/">
+                    <div class="orange-btn">Check it out their website</div>
+                </a>
+                <a href="https://data.orbitntnu.com/d/QhEfkIf4z/selfiesat?orgId=1">
+                    <div class="blue-btn">Live stats of their satellite</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="giftshop-bg">
+        <div class="giftshop-header">Check out our online Gift Shop</div>
+        <div class="giftshop-box">
+            <div class="giftshop-box-left">
+                <img src="assets/img/earthplush.jpg" alt="Earth Plush">
+            </div>
+            <div class="giftshop-box-right">
+                <div class="giftshop-maintext">Support our Museum by purchasing our Earth Plush!</div>
+                <a href="giftshop.html">
+                    <div class="orange-btn">Click Here</div>
+                </a>
+            </div>
+        </div>
+    </div>
     <footer>
         <div class="top-line"></div>
         <div class="footer">
@@ -72,9 +130,10 @@
             </div>
             <div class="footer-side-two">
                 <div>
-                    <div class="footertext-news">Stay up to date on the latest stories and events with our newsletter</div>
+                    <div class="footertext-news">Stay up to date on the latest stories and events with our newsletter
+                    </div>
                     <div class="signup">
-                        <input type="email" id="email" name="email" placeholder="Enter your E-mail address..."></input>
+                        <input type="email" id="email" name="email" placeholder="Enter your E-mail address...">
                         <button class="signup-btn">sign up</button>
                     </div>
                 </div>
@@ -104,4 +163,5 @@
         </div>
     </footer>
 </body>
+
 </html>
