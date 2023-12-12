@@ -1,17 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" />
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The Museum of Science">
     <meta name="author" content="JNettli">
-    <link rel="stylesheet" href="assets/styles/main.css" type="text/css" />
+    <link rel="stylesheet" href="assets/styles/main.css" type="text/css">
+    <link rel="stylesheet" href="assets/styles/physics.css" type="text/css">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&family=Tomorrow:wght@300;400;500&display=swap" rel="stylesheet">
-    <title>Home Page | Museum of Science</title>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600&family=Tomorrow:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <title>Physics | Museum of Science</title>
 </head>
+
 <body>
     <header class="navbar">
         <div class="mobile-burger-menu">
@@ -24,23 +29,106 @@
         </div>
         <div class="desktop-menu-row">
             <a href="events.html">
-                <button>events</button>
+                <div>events</div>
             </a>
             <a href="space.html">
-                <button>space</button>
+                <div>space</div>
             </a>
             <a href="physics.html">
-                <button>physics</button>
+                <div class="active">physics</div>
             </a>
             <a href="giftshop.html">
-                <button>gift shop</button>
+                <div>gift shop</div>
             </a>
         </div>
     </header>
-    <div>
-        Hello world
+    <div class="back-to-home">
+        <a href="index.html">
+            <img src="assets/img/back2home.svg" alt="Back to Home Page">
+        </a>/ Physics
     </div>
-
+    <div class="herobanner">
+        <img id="heromobile" src="assets/img/heromain.jpg" alt="Hero-banner sick experiments">
+        <img id="herodesktop" src="assets/img/heromain.jpg" alt="Hero-banner sick experiments">
+        <div class="herobanner-textoverlay">
+            <div class="startrek">the wonderful world of</div>
+            <div class="starman">physics</div>
+            <div class="heroline"></div>
+            <div class="herotext">Visit us today to see our new VR section and do your own science experiments!</div>
+        </div>
+    </div>
+    <div class="space-bg">
+        <div class="event-category">
+                <div class="row-gang">
+                    <div class="newton-mugshot">
+                        <img src="assets/img/newton.jpg" alt="SelfieSat">
+                    </div>
+                    <div class="center-gang">
+                        <div class="event-maintext">Sir Isaac Newton<br>The Father of Physics</div>
+                        <div class="event-line"></div>
+                        <div class="event-undertext">
+                            A brilliant English physicist and mathematician, is a prominent figure in the history of science. His unparalleled contributions have shaped our understanding of the natural world. Newton's laws of motion and universal gravitation are cornerstones of modern physics.
+                        </div>
+                    </div>
+                </div>
+            <div id="desktop-hider" class="event-undertext">
+                <div class="event-line"></div>
+                <p id="herodesktop">
+                    Newton's Laws of Motion are fundamental principles in physics that describe the motion of <br><br>
+                    
+                    1. First Law - Law of Inertia: An object at rest will stay at rest, and an object in motion will stay in motion with the same speed and direction, unless acted upon by an external force.<br><br>
+                    2. Second Law - Law of Acceleration: The acceleration of an object is directly proportional to the net force applied to it and inversely proportional to its mass. This can be expressed as the equation F = ma, where F is the force applied, m is the mass of the object, and a is the resulting acceleration.<br><br>
+                    3. Third Law - Law of Action and Reaction: For every action, there is an equal and opposite reaction. This means that whenever an object exerts a force on another object, the second object exerts an equal and opposite force on the first.<br><br>
+                    
+                    These laws provide a framework for understanding the behavior of objects in motion and have applications in various fields, including engineering, mechanics, and astrophysics.<br><br>
+                    
+                    Remember to review and verify this information with reliable sources before using it for any specific purposes.<br><br>
+                    </p>
+            </div>
+        </div>
+            <div class="event-category">
+                <div class="center-gang">
+                    <div class="event-maintext">Newton's Cradle</div>
+                <div class="event-undertext">Newton's Cradle is a device that demonstrates the conservation of momentum and energy, proving Newton's Third Law of Motion!</div>
+                <div class="event-line"></div>
+                <div class="cradle-anim">
+                    <div class="cradle-left">
+                        <img src="assets/img/cradle.png" alt="cradle-piece">
+                    </div>
+                    <div>
+                        <img src="assets/img/cradle.png" alt="cradle-piece">
+                    </div>
+                    <div>
+                        <img src="assets/img/cradle.png" alt="cradle-piece">
+                    </div>
+                    <div>
+                        <img src="assets/img/cradle.png" alt="cradle-piece">
+                    </div>
+                    <div class="cradle-right">
+                        <img src="assets/img/cradle.png" alt="cradle-piece">
+                    </div>
+                </div>
+                <a href="https://en.wikipedia.org/wiki/Newton%27s_laws_of_motion">
+                    <div class="blue-btn">Learn more about the Laws of Physics here!</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="fade-to-black"></div>
+    <div class="giftshop-bg">
+        <div class="giftshop-header">Check out our online Gift Shop</div>
+        <div class="giftshop-box">
+            <div class="giftshop-box-left">
+                <img src="assets/img/earthplush.jpg" alt="Earth Plush">
+            </div>
+            <div class="giftshop-box-right">
+                <div class="giftshop-maintext">Support our Museum by purchasing our Earth Plush!</div>
+                <a href="giftshop.html">
+                    <div class="orange-btn">Click Here</div>
+                </a>
+            </div>
+        </div>
+    </div>
     <footer>
         <div class="top-line"></div>
         <div class="footer">
@@ -72,9 +160,10 @@
             </div>
             <div class="footer-side-two">
                 <div>
-                    <div class="footertext-news">Stay up to date on the latest stories and events with our newsletter</div>
+                    <div class="footertext-news">Stay up to date on the latest stories and events with our newsletter
+                    </div>
                     <div class="signup">
-                        <input type="email" id="email" name="email" placeholder="Enter your E-mail address..."></input>
+                        <input type="email" id="email" name="email" placeholder="Enter your E-mail address...">
                         <button class="signup-btn">sign up</button>
                     </div>
                 </div>
@@ -88,9 +177,39 @@
                         <p class="footer-text-opening">Sunday</p>
                         <p class="footer-text-hours">Events only</p>
                     </div>
-                    <div class="location-map">
-                        <img src="assets/img/locationmap.svg" alt="Museum Location">
-                    </div>
+                    <div id="OSM-map" style="height: 200px;"></div>
+                    <script type="text/javascript">var map;
+                        var marker = [];
+                        var mapOptions = {
+                            scrollWheelZoom: false,
+                        };
+
+                        var id = 'OSM-map';
+
+                        var centerLatLng = [59.966433924436004, 10.782394231292264];
+                        map = L.map(id, mapOptions).setView(centerLatLng, 18);
+
+                        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                            attribution: 'generated with <a href="https://www.osm-generator.com/">osm-generator.com</a> - &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                        }).addTo(map);
+
+
+                        marker = L.marker(
+                            L.latLng(59.96658428018584, 10.782381751376725), {
+                            icon: L.icon({
+                                iconUrl: 'assets/img/location.svg',
+                            }),
+                            title: 'Museum of Science'
+                        });
+                        marker.addTo(map);
+                        marker.bindPopup('Museum of Science');
+
+
+                        L.control.bigImage({
+                            position: 'topright'
+                        }).addTo(map);
+
+                    </script>
                 </div>
             </div>
             <div class="mobile-socials">
@@ -104,4 +223,5 @@
         </div>
     </footer>
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +11,14 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&family=Tomorrow:wght@300;400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&family=Tomorrow:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
     <title>Home Page | Museum of Science</title>
 </head>
+
 <body>
     <header class="navbar">
         <div class="mobile-burger-menu">
@@ -76,7 +82,8 @@
                 <div class="event-maintext">Orbit NTNU's Selfiesat Program</div>
                 <div class="event-line"></div>
                 <div class="event-undertext">
-                    How it was made and how this small group form Norway worked with SpaceX to make their dreams a reality.
+                    How it was made and how this small group form Norway worked with SpaceX to make their dreams a
+                    reality.
                 </div>
                 <div class="event-line"></div>
                 <a href="space.html">
@@ -92,7 +99,8 @@
                 <div class="event-maintext">VR - The Future of Entertainment?</div>
                 <div class="event-line"></div>
                 <div class="event-undertext">
-                    Our VR headsets have the exciting new game “Boneworks” where you can play around with physics in a safe, virtual space!
+                    Our VR headsets have the exciting new game “Boneworks” where you can play around with physics in a
+                    safe, virtual space!
                 </div>
                 <div class="event-line"></div>
                 <a href="physics.html">
@@ -150,7 +158,8 @@
             </div>
             <div class="footer-side-two">
                 <div>
-                    <div class="footertext-news">Stay up to date on the latest stories and events with our newsletter</div>
+                    <div class="footertext-news">Stay up to date on the latest stories and events with our newsletter
+                    </div>
                     <div class="signup">
                         <input type="email" id="email" name="email" placeholder="Enter your E-mail address...">
                         <button class="signup-btn">sign up</button>
@@ -166,9 +175,39 @@
                         <p class="footer-text-opening">Sunday</p>
                         <p class="footer-text-hours">Events only</p>
                     </div>
-                    <div class="location-map">
-                        <img src="assets/img/locationmap.svg" alt="Museum Location">
-                    </div>
+                    <div id="OSM-map" style="height: 200px;"></div>
+                    <script type="text/javascript">var map;
+                        var marker = [];
+                        var mapOptions = {
+                            scrollWheelZoom: false,
+                        };
+
+                        var id = 'OSM-map';
+
+                        var centerLatLng = [59.966433924436004, 10.782394231292264];
+                        map = L.map(id, mapOptions).setView(centerLatLng, 18);
+
+                        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                            attribution: 'generated with <a href="https://www.osm-generator.com/">osm-generator.com</a> - &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                        }).addTo(map);
+
+
+                        marker = L.marker(
+                            L.latLng(59.96658428018584, 10.782381751376725), {
+                            icon: L.icon({
+                                iconUrl: 'assets/img/location.svg',
+                            }),
+                            title: 'Museum of Science'
+                        });
+                        marker.addTo(map);
+                        marker.bindPopup('Museum of Science');
+
+
+                        L.control.bigImage({
+                            position: 'topright'
+                        }).addTo(map);
+
+                    </script>
                 </div>
             </div>
             <div class="mobile-socials">
@@ -182,4 +221,5 @@
         </div>
     </footer>
 </body>
+
 </html>

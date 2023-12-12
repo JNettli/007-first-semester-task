@@ -23,6 +23,11 @@ a {
     text-decoration: none;
 }
 
+.active {
+    text-decoration: underline;
+    text-decoration-color: var(--highlight);
+}
+
 .navbar {
     height: 60px;
     width: 100vw;
@@ -233,9 +238,9 @@ input[type=email]:focus {
     opacity: .8;
 }
 
-.location-map img {
-    border: 1px solid var(--maintext);
-    height: 150px;
+#OSM-map {
+    height: 200px;
+    width: 200px;
 }
 
 .back-to-home {
@@ -543,10 +548,6 @@ h2 {
     .footer-text-hours {
         font-size: 16px;
     }
-
-    .location-map img {
-        height: 200px;
-    }
     
     .category-box img {
         height: 280px;
@@ -556,5 +557,23 @@ h2 {
 
     .back-to-home {
         display: none;
+    }
+    .giftshop-box {
+        padding: 16px 32px;
+    }
+
+    .giftshop-box-left img {
+        height: 240px;
+        width: 240px;
+    }
+
+    .giftshop-box-right {
+        width: 220px;
+        margin-left: 16px;
+    }
+
+    .giftshop-maintext {
+        font-size: 28px;
+        width: 250px;
     }
 }
