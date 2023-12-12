@@ -33,6 +33,10 @@ a {
     max-width: 100vw;
 }
 
+.back-to-home {
+    background-color: var(--main-bg);
+}
+
 #herodesktop {
     display: none;
 }
