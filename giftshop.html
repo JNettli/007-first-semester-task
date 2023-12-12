@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&family=Tomorrow:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
     <title>Home Page | Museum of Science</title>
 </head>
 <body>
@@ -88,9 +90,39 @@
                         <p class="footer-text-opening">Sunday</p>
                         <p class="footer-text-hours">Events only</p>
                     </div>
-                    <div class="location-map">
-                        <img src="assets/img/locationmap.svg" alt="Museum Location">
-                    </div>
+                    <div id="OSM-map" style="height: 200px;"></div>
+                    <script type="text/javascript">var map;
+                        var marker = [];
+                        var mapOptions = {
+                            scrollWheelZoom: false,
+                        };
+
+                        var id = 'OSM-map';
+
+                        var centerLatLng = [59.966433924436004, 10.782394231292264];
+                        map = L.map(id, mapOptions).setView(centerLatLng, 18);
+
+                        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                            attribution: 'generated with <a href="https://www.osm-generator.com/">osm-generator.com</a> - &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                        }).addTo(map);
+
+
+                        marker = L.marker(
+                            L.latLng(59.96658428018584, 10.782381751376725), {
+                            icon: L.icon({
+                                iconUrl: 'assets/img/location.svg',
+                            }),
+                            title: 'Museum of Science'
+                        });
+                        marker.addTo(map);
+                        marker.bindPopup('Museum of Science');
+
+
+                        L.control.bigImage({
+                            position: 'topright'
+                        }).addTo(map);
+
+                    </script>
                 </div>
             </div>
             <div class="mobile-socials">

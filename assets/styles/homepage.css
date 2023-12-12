@@ -97,6 +97,7 @@ a {
 }
 
 
+
 @media (min-width: 768px) {
     .herobanner-textoverlay {
         padding: 14px 74px;
@@ -149,24 +150,5 @@ a {
     }
     #herodesktop {
         display: block;
-    }
-
-    .giftshop-box {
-        padding: 16px 32px;
-    }
-
-    .giftshop-box-left img {
-        height: 240px;
-        width: 240px;
-    }
-
-    .giftshop-box-right {
-        width: 220px;
-        margin-left: 16px;
-    }
-
-    .giftshop-maintext {
-        font-size: 28px;
-        width: 250px;
     }
 }
