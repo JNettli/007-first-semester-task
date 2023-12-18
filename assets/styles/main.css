@@ -248,6 +248,7 @@ input[type=email]:focus {
     width: 100vw;
     font-family: var(--mainfont);
     font-size: 24px;
+    overflow-x: hidden;
 }
 
 .back-to-home img {
@@ -396,10 +397,6 @@ h2 {
     background-color: var(--maintext);
 }
 
-.starsgif img {
-    position: absolute;
-}
-
 .giftshop-header {
     font-family: var(--mainfont);
     font-size: 32px;
@@ -441,7 +438,78 @@ h2 {
     margin-top: 20px;
     margin-bottom: 0;
 }
+.astronaut {
+    position: absolute;
+    z-index: 1;
+    top: 400px;
+    left: 35px;
+    animation: floating 5s ease-in-out infinite;
+}
 
+.astronaut-2 {
+    position: absolute;
+    z-index: 1;
+    top: 420px;
+    right: 35px;
+    animation: floating-2 6s ease-in-out infinite;
+}
+
+.astronaut img {
+    height: 150px;
+}
+
+.astronaut-2 img {
+    transform: scaleX(-1);
+    height: 150px;
+}
+
+@keyframes floating {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes floating-2 {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.stars {
+    position: absolute;
+    z-index: 0;
+    animation: stars 2s ease-in-out infinite;
+}
+
+@keyframes stars {
+    0% {
+        opacity: 50%;
+    }
+
+    50% {
+        opacity: 25%;
+    }
+
+    100% {
+        opacity: 50%;
+    }
+}
 
 /*Tablet screens*/
 @media (min-width: 768px) {
@@ -485,6 +553,14 @@ h2 {
 
     .category-maintext {
         font-size: 16px;
+    }
+    
+    .astronaut {
+        left: 20%;
+    }
+
+    .astronaut-2 {
+        right: 20%;
     }
 }
 
@@ -575,5 +651,13 @@ h2 {
     .giftshop-maintext {
         font-size: 28px;
         width: 250px;
+    }
+
+    .astronaut {
+        left: 30%;
+    }
+
+    .astronaut-2 {
+        right: 30%;
     }
 }
