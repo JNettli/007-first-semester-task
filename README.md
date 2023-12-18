@@ -29,6 +29,8 @@ I wanted to create a unique animation for every single page, but due to a person
 
 I knew from the start that what I at least wanted was an astronaut floating in space, which turned to two astronauts and a Newton's cradle.
 
+When creating the Figma file, after finishing the initial mobile pages and starting to create the tablet version I felt my time could be better utilized simply trying to code it in directly instead of using tons of time on Figma, so this is what I did.
+
 ## Reflection
 
 I found the design aspect of this website to be more challenging than I initially thought. To create a website that appeals to children was not something I could easily find on the web, testing several pages like NRK's barnetv page, and a few flash game pages like 1001spill.no, but these just seemed like any other page just with more colors. I tried several different colors on my page but I settled on a white background with orange/dark blue themes as I felt too many colors or strong colors felt too tacky for me.
