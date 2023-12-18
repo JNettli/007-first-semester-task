@@ -3,14 +3,14 @@
 }
 
 :root {
-    --background: #F1F1F1;
-    --maintext: #08080C;
-    --highlight: #FF9900;
-    --main-bg: #D9D9D9;
-    --utilitybg: #2B2B3B;
+    --background: #f1f1f1;
+    --maintext: #08080c;
+    --highlight: #ff9900;
+    --main-bg: #d9d9d9;
+    --utilitybg: #2b2b3b;
     --menuselected: #424252;
-    --textfont: 'Titillium Web', sans-serif;
-    --mainfont: 'Tomorrow', sans-serif;
+    --textfont: "Titillium Web", sans-serif;
+    --mainfont: "Tomorrow", sans-serif;
 }
 
 body {
@@ -65,11 +65,11 @@ a {
     background-color: var(--utilitybg);
     color: var(--background);
     padding: 8px 16px;
-    transition: .2s;
+    transition: 0.2s;
 }
 
 .desktop-menu-row div:hover {
-    transition: .2s;
+    transition: 0.2s;
     background-color: var(--menuselected);
     cursor: pointer;
 }
@@ -129,14 +129,14 @@ footer {
 .footer-nav a {
     text-decoration: none;
     color: var(--background);
-    transition: .3s;
+    transition: 0.3s;
     font-weight: 500;
     margin-bottom: 16px;
 }
 
 .footer-nav a:hover {
     color: var(--highlight);
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .left-links {
@@ -171,26 +171,26 @@ footer {
     flex-direction: row;
 }
 
-input[type=email] {
+input[type="email"] {
     width: 200px;
     padding: 8px 8px;
     margin-right: 8px;
     border: 1px solid var(--background);
-    transition: .5s;
+    transition: 0.5s;
     outline: none;
     background-color: var(--utilitybg);
     color: var(--background);
 }
 
-input[type=email]::placeholder {
+input[type="email"]::placeholder {
     color: var(--background);
     font-family: var(--mainfont);
     font-size: 12px;
     font-weight: 300;
-    opacity: .7;
+    opacity: 0.7;
 }
 
-input[type=email]:focus {
+input[type="email"]:focus {
     border: 1px solid var(--highlight);
 }
 
@@ -201,12 +201,12 @@ input[type=email]:focus {
     font-family: var(--mainfont);
     text-transform: capitalize;
     font-weight: 400;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .signup-btn:hover {
     cursor: pointer;
-    transition: .3s;
+    transition: 0.3s;
     background-color: var(--background);
 }
 
@@ -235,7 +235,7 @@ input[type=email]:focus {
     font-size: 12px;
     font-weight: 300;
     margin: 0;
-    opacity: .8;
+    opacity: 0.8;
 }
 
 #OSM-map {
@@ -265,7 +265,7 @@ input[type=email]:focus {
     text-align: center;
     color: var(--maintext);
     background-color: var(--highlight);
-    transition: .3s;
+    transition: 0.3s;
     border: var(--maintext) 2px solid;
     margin-bottom: 20px;
     margin-top: 8px;
@@ -274,12 +274,12 @@ input[type=email]:focus {
 
 .orange-btn:hover {
     background-color: var(--background);
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .orange-btn:active {
     background-color: var(--activeclr);
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .blue-btn {
@@ -291,7 +291,7 @@ input[type=email]:focus {
     text-align: center;
     color: var(--maintext);
     background-color: var(--activeclr);
-    transition: .3s;
+    transition: 0.3s;
     border: var(--maintext) 2px solid;
     margin-top: -12px;
     cursor: pointer;
@@ -300,12 +300,12 @@ input[type=email]:focus {
 
 .blue-btn:hover {
     background-color: var(--background);
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .blue-btn:active {
     background-color: var(--highlight);
-    transition: .3s;
+    transition: 0.3s;
 }
 
 h2 {
@@ -342,12 +342,12 @@ h2 {
 
 .category-centerer a {
     color: var(--maintext);
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .category-centerer a:hover {
     color: var(--highlight);
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .category-box {
@@ -381,7 +381,10 @@ h2 {
 }
 
 .fade-to-black {
-    background-image: linear-gradient(rgba(241, 241, 241, 0), rgba(8, 8, 12, 1) 70%);
+    background-image: linear-gradient(
+        rgba(241, 241, 241, 0),
+        rgba(8, 8, 12, 1) 70%
+    );
     width: 100vw;
     height: 150px;
 }
@@ -407,7 +410,7 @@ h2 {
 }
 
 .giftshop-box {
-    background-color: #D9D9D933;
+    background-color: #d9d9d933;
     display: flex;
     flex-direction: row;
     padding: 12px 8px;
@@ -537,7 +540,7 @@ h2 {
     .mobile-socials {
         display: none;
     }
-    
+
     .main-bg {
         width: auto;
     }
@@ -558,7 +561,7 @@ h2 {
     .category-maintext {
         font-size: 16px;
     }
-    
+
     .astronaut {
         left: 20%;
     }
@@ -609,7 +612,7 @@ h2 {
         width: 300px;
     }
 
-    input[type=email] {
+    input[type="email"] {
         width: 75%;
     }
 
@@ -628,7 +631,7 @@ h2 {
     .footer-text-hours {
         font-size: 16px;
     }
-    
+
     .category-box img {
         height: 280px;
         width: 280px;

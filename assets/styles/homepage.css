@@ -75,7 +75,7 @@ a {
 
 .event-maintext {
     font-family: var(--mainfont);
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 500;
     text-align: center;
 }
@@ -84,15 +84,15 @@ a {
     display: none;
     background-color: var(--highlight);
     height: 2px;
-    width: 260px;
+    width: 300px;
     margin: 24px 0;
 }
 
 .event-undertext {
     display: none;
     font-family: var(--textfont);
-    font-size: 16px;
-    width: 260px;
+    font-size: 20px;
+    width: 300px;
 
 }
 
@@ -116,11 +116,11 @@ a {
 
     .event-maintext {
         margin-top: 24px;
-        width: 260px;
+        width: 300px;
     }
 
     .event-category .orange-btn {
-        width: 260px;
+        width: 300px;
     }
 
     .event-undertext {

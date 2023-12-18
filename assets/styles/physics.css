@@ -33,6 +33,39 @@ a {
     max-width: 100vw;
 }
 
+.herobanner-2 {
+    position: relative;
+    margin-bottom: -4px;
+}
+
+.herobanner-2 img {
+    width: 100vw;
+}
+
+.herobanner-2 .herobanner-textoverlay {
+    left: 0;
+    right: auto;
+}
+
+.herobanner-2 .herobanner-textoverlay p {
+    font-size: 24px;
+    font-family: var(--mainfont);
+    color: var(--background);
+}
+
+.center-gang p {
+    font-family: var(--textfont);
+    font-size: 20px;
+}
+
+.vr-box {
+    margin: 8px 0;
+}
+
+.vr-box img {
+    width: 356px;
+}
+
 .back-to-home {
     background-color: var(--main-bg);
 }
@@ -126,7 +159,7 @@ a {
 
 .event-maintext {
     font-family: var(--mainfont);
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 500;
     text-align: center;
     margin-bottom: 4px;
@@ -142,7 +175,7 @@ a {
 
 .event-undertext {
     font-family: var(--textfont);
-    font-size: 16px;
+    font-size: 20px;
     padding: 0 8px;
 }
 
@@ -228,6 +261,18 @@ a {
         padding: 14px 64px;
     }
 
+    .herobanner-2 img {
+        max-width: 1000px;
+    }
+
+    .herobanner-2 .herobanner-textoverlay p {
+        font-size: 32px;
+    }
+
+    .vr-box img {
+        width: 468px;
+    }
+
     .starman {
         font-size: 44px;
         font-family: var(--mainfont);
@@ -284,7 +329,7 @@ a {
 
     .event-maintext {
         margin-top: 24px;
-        width: 260px;
+        width: 300px;
     }
 
     .event-category .orange-btn .blue-btn {
@@ -300,6 +345,10 @@ a {
 
     .herobanner-textoverlay {
         padding: 16px 48px;
+    }
+
+    .herobanner-2 .herobanner-textoverlay p {
+        font-size: 40px;
     }
 
     .starman {
