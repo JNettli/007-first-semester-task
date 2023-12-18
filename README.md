@@ -19,7 +19,7 @@ First I created a low fidelity sketch in my notebook of how I wanted the general
 
 Then I used Copilot and DALL-E 3 to create a logo for the project. This turned out to be of big help as the logo provided me with an idea of the color palette for the website as well.
 
-<img src="assets/img/big-logo.svg" alt="Logo">
+<img src="assets/img/logo-big.svg" alt="Logo">
 
 It created the logo on the left side. I really liked the orange-ish and dark blue color scheme so I added a simple orange line between the logo and the museum name text which I liked a lot, and became a running theme throughout the website. 
 
