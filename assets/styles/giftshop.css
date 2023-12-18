@@ -137,6 +137,10 @@ a {
     margin-bottom: 24px;
 }
 
+.main-bg {
+    padding: 0;
+}
+
 @media (min-width: 768px) {
     .herobanner-textoverlay {
         padding: 0 16px;
