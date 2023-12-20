@@ -496,7 +496,7 @@ h2 {
 
 .stars {
     position: absolute;
-    z-index: 0;
+    z-index: -1;
     animation: stars 2s ease-in-out infinite;
 }
 
